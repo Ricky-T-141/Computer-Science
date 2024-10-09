@@ -1,4 +1,5 @@
 # Boolean Expression
+
 # Kinda like a mathematical formula
 # Can only evaluate to True or False
 # Are my shoes tied? = True
@@ -27,6 +28,7 @@ print("Walrus" == "Walrus")     # == is totally valid for 2 strings
 
 
 # If Statements
+
 # Evaluate boolean expressions
 # Make decisions about which code to run next
 
@@ -94,5 +96,91 @@ else:
     print("Not right  :(  (come on bro)")
 
 
+# String functions
+    
+# A group of like functions that manipulate strings
+# They modify strings
+# SUPER easy and convenient to use
+# Python would really not be fun without them
+    
+#   .lower()
+# converts a string to all lowercase
+# no matter what the input casing is, it is converted to lowercase
+# and the answer is lowercase
+input_answer = "Lord of The Rings"
+input_answer = input_answer.lower() #Convertes to "lord of the rings"
+real_answer = "lord of the rings"
+print(input_answer == real_answer)
 
 
+#   .upper()
+# Converts a string to uppercase!
+x = "hello world".upper()
+print(x)    #prints HELLO WORLD
+
+#   .capitalize()
+# Converts to lowercase, hen capitalizes the first letter
+y = "HeLlo wOrLd".capitalize()
+print(y)    #prints Hello world
+
+#.title()
+# Converts a string to titlecase
+# Capital first letters of words 
+z = "HeLlO wOrLd".title()
+print(z)    #prints "Hello World"
+
+#   .swapcase()
+# Invertes the caseing of each character
+q = "Hello World".swapcase()
+print(q)    #prints "hELLO wORLD"
+
+
+
+# elif
+
+x = 5
+
+if x > 0:       # > < == >= <= !=
+    print("x is a positive number!")
+
+elif x < 0:     # elif statements are always paired to an if
+    print("x is a negative number")
+
+else:           # else statements are always paired to an if statement
+                # else statements never take a condition
+    print("x is zero!")
+
+color = "red"
+
+if color.lower() == "green":    # Only one IF
+    print("GO")
+
+elif color.lower() == "red":    # No limit to how elifs you can use
+    print("STOP")
+
+elif color.lower() == "yellow":
+    print("STOP IF YOU SAFELY CAN")
+
+else:                           # Only one ELSE
+    print("LIGHT SHOULDN'T BE ANY OTHER COLOR")
+
+
+# Why do I even need elif statements???
+# Can't I just use more if's?
+    
+
+x = 10
+
+if x > 5:
+    print("x is greater than five")
+
+if x > 8:
+    print("x is greater than eight")
+
+########################################
+    
+if x > 5:
+    print("x is greater than five")
+
+elif x > 8:
+    print("x is greater than eight")
