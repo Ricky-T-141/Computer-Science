@@ -184,3 +184,54 @@ if x > 5:
 
 elif x > 8:
     print("x is greater than eight")
+
+
+
+# Exception Handling
+# Write a program that asks for two numbers and adds them
+    
+# if    =   try
+# elif  =   except specific error type
+# else = except
+def divide_two_numbers():
+    try:
+        x = int(input("Whats the first number?\n"))
+        y = int(input("Whats the second number?\n"))
+        print(x / y)
+
+    except ValueError:
+        print("Please enter a number....")
+        divide_two_numbers()
+
+    except ZeroDivisionError:
+        print("Cannot divide by zero....")
+        divide_two_numbers
+
+    finally:
+        print()
+
+divide_two_numbers()
+
+
+
+
+# Logical Operators     and or !
+# Comparison Operators  > < == >= <=
+# Arithmetic Operators  + - * / % ** //
+
+def check_eligibility(age, exp):
+    # You must be at least 18 years old and have 1 year of experience to be eligible
+    if age >= 18 and exp >= 1:
+        print("You are eligible for the competition!")
+
+    elif age < 18:
+        print("You are not old enough to compete")
+
+    elif exp < 1:
+        print("You don't have enough dxperience to compete.")
+
+a = int(input("How old are you?\n"))
+e = int(input("How many years of exerience to you have?\n"))
+
+check_eligibility(a, e)
+
