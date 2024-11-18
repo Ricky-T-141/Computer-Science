@@ -100,3 +100,112 @@ five_numbers = [random.randint(1,100), random.randint(1,100), random.randint(1,1
 for number in five_numbers:
     sum = number + number + number + number + number
     print(sum)
+
+
+
+# There are a couple types of loops in python
+# The for loop lets you inerate a list
+# Great for looping a set number of times
+# But what if we need to loop and uncertain number of times?
+# Ex. Entering your password
+# You could get it right the first time
+# It could take you a million tries
+# Or anything in between
+    
+real_pass = "potato45"
+entered_pass = ""
+
+x = 0
+# A while loop continues looping until the condition is no longer true
+while real_pass != entered_pass:    # Check if the entered password matches the real one
+    # Ask for the password
+    entered_pass = input("Please enter the password\n")
+    x = x + 1
+    # Check if the password is correct
+    if entered_pass == real_pass:
+        print("ACCESS GRANTED")
+        print("Password correct in " + x + " attempts")
+    else:
+        print("ACCESS DENIED")
+        print(str(x) + " attempts.")
+        print("Try again")
+        
+# End password checking
+print("Welcome!")
+
+
+# With while loops, you need to be careful for infinite loops
+# When you put your computer in rest mode, it has nightmares about infinite loops
+# An infinite loop happens when you enter a while loop that can never be escaped
+
+
+# Real world example:
+# Type "Exit" to quit
+
+user_input = ""
+
+while user_input != "exit":
+    user_input = input("Enter something (type 'exit' to quit)\n")
+    print("You entered: " + user_input)
+
+print("All done")
+
+
+
+
+
+# Loop Control Statements
+# Allow you to change how loops operate
+# Do things like quit the loop early, skip the current loop, and even do nothing
+# Break, Continue, and Pass
+
+# Break
+# Exits a loop prematurely, before it was supposed to end
+
+#Example
+
+bag_fruits = ["apple", "orange", "bug", "watermelon", "pear"]
+
+for fruit in bag_fruits:
+    
+    if fruit == "bug":
+        print("Uh oh, you found a bug in the bag...")
+        break       # Break statement exits the loop immediately and continues
+    else:
+        print("You ate a " + fruit)
+
+
+
+
+# Continue 
+# Skips the current loop
+# It does not exit the entire loop, just moves on to the next iteration
+
+# Example
+orders = [15, 30, 35, 23, 100, 3, 10, 22]
+
+# Only apply discount for orders above 20 dollars
+
+for order in orders:
+    if order < 20:
+        continue            # Skips the rest of the loop iteration and goes to the next iteration
+    print("$" + str(order) + " discounted 5% to $" + str(order * 0.95))
+
+
+
+# Pass
+# Does nothing
+# Usually used as a placeholder while writing code
+# Text adventure project
+    
+if True:
+    pass
+
+def enter_forest():
+    pass
+
+def swim_river():
+    pass
+
+def eat_icecream():
+    pass
